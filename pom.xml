@@ -106,16 +106,17 @@
                 <artifactId>org.wso2.carbon.extension.identity.x509Certificate.validation</artifactId>
                 <version>${project.version}</version>
             </dependency>
-
+            <!-- Test Dependencies -->
             <dependency>
-                <groupId>org.powermock</groupId>
-                <artifactId>powermock-module-testng</artifactId>
-                <version>${powermock.version}</version>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
+                <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.powermock</groupId>
-                <artifactId>powermock-api-mockito</artifactId>
-                <version>${powermock.version}</version>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -134,6 +135,11 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>log4j-over-slf4j</artifactId>
                 <version>${slf4j.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -241,7 +247,9 @@
         <commons-httpclient.wso2.osgi.version>[3.1.0,4.0.0)</commons-httpclient.wso2.osgi.version>
         <httpcomponents-httpclient.wso2.version>4.3.6.wso2v2</httpcomponents-httpclient.wso2.version>
 
-        <powermock.version>1.7.3</powermock.version>
+        <testng.version>7.10.1</testng.version>
+        <mockito.version>5.3.1</mockito.version>
+        <jacoco.version>0.8.12</jacoco.version>
         <tomcat-coyote.version>7.0.81</tomcat-coyote.version>
 
         <imp.pkg.version.javax.servlet>2.4.0</imp.pkg.version.javax.servlet>

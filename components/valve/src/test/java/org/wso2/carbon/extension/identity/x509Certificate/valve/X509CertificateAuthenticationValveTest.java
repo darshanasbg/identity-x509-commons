@@ -24,12 +24,10 @@ import org.apache.catalina.connector.Request;
 import org.apache.catalina.connector.Response;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.wso2.carbon.extension.identity.x509Certificate.valve.config.X509ServerConfiguration;
 import org.wso2.carbon.identity.common.testng.WithCarbonHome;
-import org.wso2.carbon.identity.testutil.powermock.PowerMockIdentityBaseTest;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -41,15 +39,14 @@ import java.util.regex.Pattern;
 
 import javax.servlet.ServletException;
 
-import static org.powermock.api.mockito.PowerMockito.doNothing;
-import static org.powermock.api.mockito.PowerMockito.mockStatic;
-import static org.powermock.api.mockito.PowerMockito.when;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.mockStatic;
+import static org.mockito.Mockito.when;
 import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
 
 @WithCarbonHome
-@PrepareForTest({X509ServerConfiguration.class})
-public class X509CertificateAuthenticationValveTest extends PowerMockIdentityBaseTest {
+public class X509CertificateAuthenticationValveTest {
 
     private static final String X509_REQUEST_HEADER = "X-SSL-CERT";
     private static final String DUMMY_CERTIFICATE = "-----BEGIN CERTIFICATE-----\tMIIDiDCCAnACCQDMyyUcmVh40DANBgkqhki" +
