@@ -31,10 +31,12 @@ public class ModelSerializer {
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     public static String serializeIssuerDNMap(IssuerDNMap issuerDNMap) throws JsonProcessingException {
+
         return objectMapper.writeValueAsString(issuerDNMap);
     }
 
     public static IssuerDNMap deserializeIssuerDNMap(String json) throws JsonProcessingException {
+
         return objectMapper.readValue(json, IssuerDNMap.class);
     }
 }
