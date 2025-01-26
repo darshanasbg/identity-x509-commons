@@ -31,7 +31,6 @@ public class CertObject {
     private String certId;
     private String serialNumber;
 
-    // Getters and Setters
     public List<String> getCrlUrls() {
 
         return crlUrls;
