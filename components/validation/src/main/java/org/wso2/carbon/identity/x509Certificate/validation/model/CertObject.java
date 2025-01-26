@@ -33,39 +33,48 @@ public class CertObject {
 
     // Getters and Setters
     public List<String> getCrlUrls() {
+
         return crlUrls;
     }
 
     public void setCrlUrls(List<String> crlUrls) {
+
         this.crlUrls = crlUrls;
     }
 
     public List<String> getOcspUrls() {
+
         return ocspUrls;
     }
 
     public void setOcspUrls(List<String> ocspUrls) {
+
         this.ocspUrls = ocspUrls;
     }
 
     public String getCertId() {
+
         return certId;
     }
 
     public void setCertId(String certId) {
+
         this.certId = certId;
     }
 
     public String getSerialNumber() {
+
         return serialNumber;
     }
 
     public void setSerialNumber(String serialNumber) {
+
         this.serialNumber = serialNumber;
     }
 
     @Override
     public String toString() {
+
         return "CertObject{" +
                 "crlUrls=" + crlUrls +
                 ", ocspUrls=" + ocspUrls +

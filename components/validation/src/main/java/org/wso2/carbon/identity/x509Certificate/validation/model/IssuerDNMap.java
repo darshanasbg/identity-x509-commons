@@ -31,15 +31,18 @@ public class IssuerDNMap {
     private Map<String, List<CertObject>> issuerCertMap = new HashMap<>();
 
     public Map<String, List<CertObject>> getIssuerCertMap() {
+
         return issuerCertMap;
     }
 
     public void setIssuerCertMap(Map<String, List<CertObject>> issuerCertMap) {
+
         this.issuerCertMap = issuerCertMap;
     }
 
     @Override
     public String toString() {
+
         return "IssuerDNMap{" +
                 "issuerCertMap=" + issuerCertMap +
                 '}';
